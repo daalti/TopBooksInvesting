@@ -238,7 +238,7 @@ p {
 
 /***************************** Index page *************************************/
 
-.main .index-section {
+.index-section {
   margin-top: 2rem;
   display: flex;
   flex-flow: column nowrap;
@@ -253,7 +253,7 @@ p {
   text-decoration: none;
 }
 
-.main .index-section .index-h2 {
+.index-h2 {
   color: black;
   font-size: 2rem;
 }
@@ -386,13 +386,13 @@ p {
 
   /***************************** Index page *************************************/
 
-  .main .index-section {
+  .index-section {
     text-align: left;
     gap: 2rem;
     margin-top: 0rem;
   }
 
-  .main .index-section .index-h2 {
+  .index-h2 {
     font-size: 3rem;
   }
 }
