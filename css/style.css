@@ -365,6 +365,8 @@ p {
   font-size: 2rem;
   font-weight: 600;
   line-height: 2.5rem;
+
+  text-align: center;
 }
 
 .link {
@@ -505,5 +507,6 @@ p {
   .index-h2 {
     font-size: 3rem;
     font-weight: 600;
+    line-height: 4rem;
   }
 }
