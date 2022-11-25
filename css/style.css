@@ -124,6 +124,10 @@ body {
   text-decoration: none;
 }
 
+.active-item {
+  text-decoration: underline;
+}
+
 .header .header-container .btn-menu {
   background-color: transparent;
   border: 0rem solid;
@@ -289,8 +293,11 @@ p {
 
   .header .header-container .nav .item {
     font-family: "Open Sans", sans-serif;
-    text-decoration: none;
     color: var(--clr--Darkgrayishblue);
+  }
+
+  .active-item {
+    text-decoration: underline;
   }
 
   .header .header-container .btn-menu {
