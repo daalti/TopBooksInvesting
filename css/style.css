@@ -68,6 +68,10 @@ h3 {
   line-height: 1;
 }
 
+a:-webkit-any-link {
+  color: -webkit-link white;
+}
+
 /* Start Coding */
 
 body {
