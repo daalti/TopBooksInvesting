@@ -238,14 +238,7 @@ p {
 
 /***************************** Index page *************************************/
 
-.main-index {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 1rem;
-  padding-bottom: 4rem;
-}
-
-.main-index .index-section {
+.main .index-section {
   margin-top: 2rem;
   display: flex;
   flex-flow: column nowrap;
@@ -260,7 +253,7 @@ p {
   text-decoration: none;
 }
 
-.main-index .index-section .index-h2 {
+.main .index-section .index-h2 {
   color: black;
   font-size: 2rem;
 }
@@ -393,18 +386,13 @@ p {
 
   /***************************** Index page *************************************/
 
-  .main-index {
-    width: 40rem;
-    gap: 5rem;
-  }
-
-  .main-index .index-section {
+  .main .index-section {
     text-align: left;
     gap: 2rem;
     margin-top: 0rem;
   }
 
-  .main-index .index-section .index-h2 {
+  .main .index-section .index-h2 {
     font-size: 3rem;
   }
 }
