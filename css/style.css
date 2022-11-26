@@ -182,7 +182,10 @@ hr {
 body {
   font-family: "Open Sans", sans-serif;
   background-color: white;
+  height: 100%;
 }
+
+/**************************** HEADER *********************************************/
 
 .header {
   background-color: #00416a;
@@ -191,6 +194,8 @@ body {
 }
 
 .header .header-container {
+  position: relative;
+
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -205,32 +210,86 @@ body {
 }
 
 .header .header-container .nav {
-  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  width: 0%;
+  background-color: white;
+  height: 100vh;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  transition: all 0.5s ease;
 
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+}
 
-  height: 0;
-  overflow: hidden;
-  transition: all 0.5s ease;
+.close {
+  display: flex;
+  margin-left: auto;
+  margin-right: 1rem;
+  margin-top: 1rem;
+
+  width: 1.2rem;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.header .header-container .nav .category {
+  display: none;
+}
+
+.header .header-container .nav .category.activo {
+  display: flex;
+  flex-flow: column nowrap;
+
+  gap: 1rem;
+}
+
+.header .header-container .nav .category.activo {
+  display: flex;
+  flex-flow: column nowrap;
+
+  gap: 1rem;
+}
+
+.header .header-container .nav .item-category {
+  display: flex;
+  flex-flow: row nowrap;
+
+  align-items: center;
+  color: black;
+}
+
+.header .header-container .nav .item-category:hover {
+  cursor: pointer;
 }
 
 .header .header-container .nav.activo {
-  height: 20rem;
+  left: 40%;
+  width: 60%;
+}
 
-  font-size: 1rem;
-  font-weight: 600;
+.header .header-container .nav .menu-item-container {
+  display: none;
+}
+
+.header .header-container .nav .menu-item-container.activo {
+  margin: 0rem 2rem;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .header .header-container .nav .menu-item {
-  margin: 1rem 0rem;
+  margin-top: 0.5rem;
 }
 
 .item {
   font-family: "Open Sans", sans-serif;
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -247,9 +306,7 @@ body {
   cursor: pointer;
 }
 
-.header .nav:hover {
-  cursor: pointer;
-}
+/***************************** MAIN**********************************************/
 
 .main {
   display: flex;
@@ -379,7 +436,7 @@ p {
   text-decoration: none;
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 40rem) {
   body {
     display: flex;
     flex-flow: column;
@@ -393,18 +450,68 @@ p {
   }
 
   .header .header-container {
-    width: 60rem;
+    width: 40rem;
   }
 
   .header .header-container .nav {
+    position: static;
+    height: auto;
+    width: auto;
+
     display: flex;
     flex-flow: row nowrap;
-    margin-top: 0em;
-    width: auto;
-    height: 100%;
-    overflow: visible;
 
     background-color: transparent;
+    margin-right: 1rem;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .header .header-container .nav .item-category {
+    display: flex;
+    flex-flow: row nowrap;
+
+    align-items: center;
+    color: white;
+
+    gap: 0.5rem;
+  }
+
+  .arrow {
+    filter: brightness(0) invert(1);
+  }
+
+  .header .header-container .nav .category {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+
+    gap: 1rem;
+  }
+
+  .header .header-container .nav .menu-item-container {
+    display: none;
+  }
+
+  .header .header-container .nav .menu-item-container.activo {
+    position: absolute;
+    top: 2.4rem;
+    right: -2rem;
+    color: black;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    background-color: white;
+
+    padding: 1rem;
+
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
 
   .header .header-container .nav .item {
@@ -421,7 +528,6 @@ p {
   }
 
   .header .header-container .nav .menu-item {
-    margin: -1rem 0.8rem;
   }
 
   .h1 {
