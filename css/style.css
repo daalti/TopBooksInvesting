@@ -266,6 +266,7 @@ body {
 
 .header .header-container .nav .item-category:hover {
   cursor: pointer;
+  font-weight: 600;
 }
 
 .header .header-container .nav.activo {
@@ -293,6 +294,9 @@ body {
   text-decoration: none;
 }
 
+.item:hover {
+  font-weight: 600;
+}
 .active-item {
   text-decoration: underline;
 }
